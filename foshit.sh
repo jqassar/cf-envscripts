@@ -24,7 +24,7 @@ CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns-for-containers.yml"
 # Minimize instances/memory.
-CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-lower-default-app-memory.yml"
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/use-lower-default-app-memory.yml"
 
 echo "Running $CFCMD $CFARG..."
 $CFCMD $CFARG
