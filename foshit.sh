@@ -13,6 +13,9 @@ CFARG="$CFARG -o $WORKSPACE_DIR/operations/use-compiled-releases.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns.yml"
 # #bosh said it was on by default but maybe not in here...?
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns-for-containers.yml"
+# Minimize instances/memory.
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/scale-down-instances-and-memory.yml"
+
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/skip-consul-cell-registrations.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/skip-consul-locks.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul.yml"
@@ -21,8 +24,5 @@ CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul.yml"
 #CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul-bosh-lite.yml"
 # GrootFS is now on by default.
 #CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-grootfs.yml"
-# Minimize instances/memory.
-CFARG="$CFARG -o $WORKSPACE_DIR/operations/scale-down-instances-and-memory.yml"
-
 echo "Running $CFCMD $CFARG..."
 $CFCMD $CFARG
