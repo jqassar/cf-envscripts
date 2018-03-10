@@ -19,6 +19,12 @@ CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul.yml"
 #CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul-bosh-lite.yml"
 # GrootFS is now on by default.
 #CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-grootfs.yml"
+# However, you need bosh-dns for the containers to work.
+# #bosh said it was on by default but maybe not in here...?
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns.yml"
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns-for-containers.yml"
+# Minimize instances/memory.
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-lower-default-app-memory.yml"
 
 echo "Running $CFCMD $CFARG..."
 $CFCMD $CFARG
