@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Edit this to the public IP of the director.
-DIRECTOR_IP=10.244.4.2
+DIRECTOR_IP=192.168.50.6
 
 set -e
 
