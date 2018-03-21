@@ -1,4 +1,5 @@
 #!/bin/sh
+# WARNING: This file probably does not work by itself (requires changes in other repos).
 CFARG=""
 
 WORKSPACE_DIR="/work/cf-deployment"
