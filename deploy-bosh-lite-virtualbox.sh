@@ -9,9 +9,10 @@ DIRECTOR_IP="192.168.50.6"
 DIRECTOR_DOMAIN=""
 # These will be used in later commands, so they get exported.
 # Insert variables between the []. e.g. [8.8.8.8,8.8.4.4]
-
-export INTERNAL_NTP="[0.pool.ntp.org,1.pool.ntp.org]"
-export INTERNAL_DNS="[8.8.8.8]"
+# In order to set this appropriately prior to beginning the process,
+# export INTERNAL_NTP and INTERNAL_DNS with your own values.
+export INTERNAL_NTP="${INTERNAL_NTP:-[0.pool.ntp.org,1.pool.ntp.org]}"
+export INTERNAL_DNS="${INTERNAL_DNS:-[8.8.8.8]}"
 
 # Proxy settings are required in some environments.
 #proxyhost="proxy.host:port"
@@ -49,4 +50,4 @@ BARG="$BARG -v outbound_network_name=NatNetwork"
 #BARG="$BARG -v no_proxy=$NO_PROXY"
 
 echo "Running $BCMD $BARG..."
-#$BCMD $BARG $*
+$BCMD $BARG $*
