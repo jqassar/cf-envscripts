@@ -14,6 +14,8 @@ CFARG="$CFARG -o $WORKSPACE_DIR/operations/use-compiled-releases.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/disable-consul.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/bosh-lite.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns.yml"
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns-for-containers.yml"
+CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/use-bosh-dns-for-windows2016-containers.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/skip-consul-cell-registrations.yml"
 CFARG="$CFARG -o $WORKSPACE_DIR/operations/experimental/skip-consul-locks.yml"
 # Only for bosh-lite deployments.
